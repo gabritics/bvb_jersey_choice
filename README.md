@@ -1,6 +1,6 @@
-# React + TypeScri# BVB Kit Survey — React + TypeScript + Vite
+# BVB Kit Survey — React + TypeScript + Vite
 
-A tiny two-page app that compares two images and asks for a user choice.
+A tiny two-page app that compares two images and asks for a user choice. With Routing and a dropdown selection that activates a next button only after selection
 Built with React, TypeScript, Vite, and React Router.
 
 ## Features

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex; /*Flexbox aktivieren*/
+  justify-content: center; /*vertikal_zentrieren*/
+  align-items: center; /*horizontal zentrieren*/
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_dd{
+  padding: 0.8rem 1.6rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 2px solid black;
+  border-radius: 8px;
+  background-color: #007acc;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+/* Unsichtbares dropdown label
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;margin: -1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+  border:0;}
+*/
+
+/* Button normal + disabled grau */
+.action-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.1rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #007acc;
+  color: white;
+  cursor: pointer;
+}
+.action-btn:hover:not(:disabled) {
+  background: #005fa3;
+}
+.action-btn:disabled {
+  background: #cccccc;
+  border-color: #aaaaaa;
+  color: #666666;
+  cursor: not-allowed;
+  filter: grayscale(40%);
+}

@@ -3,7 +3,7 @@
 A tiny two-page app that compares two images and asks for a user choice. With Routing and a dropdown selection that activates a next button only after selection.
 Built with React, TypeScript, Vite, and React Router.
 
-<img src="Bildschirmfoto 2025-09-18 um 11.26.52.png" alt="alt text" width="300">
+<img src="Bildschirmfoto 2025-09-18 um 11.26.52.png" alt="alt text" width="500">
 
 ## Features
 

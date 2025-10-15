@@ -41,67 +41,6 @@ npm run build
 npm run preview
 ```
 
-## Project Structure (simplified)
-
-```
-public/
-  E2C44F55-...jpeg
-  92835-...webp
-
-src/
-  main.tsx          # App bootstrap (createRoot + BrowserRouter)
-  App.tsx           # Routes: "/" → Home, "/markup" → MarkupPage
-  MarkupPage.tsx    # Images, text, Dropdown (controlled), disabled button
-  index.css         # Minimal layout/styles
-
-index.html          # <div id="root"> and <title>
-```
-
-> **Assets:** Files in `public/` should be referenced **without** the `public/` prefix, e.g.
-> `<img src="/E2C44F55-...jpeg" />` (leading slash), so they resolve in dev and in production builds.
-
-## How It Works
-
-* **index.html**: Provides the `#root` mount node and sets the document title (`BVB Trikot`).
-* **main.tsx**:
-
-  ```tsx
-  createRoot(document.getElementById('root')!).render(
-    <StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </StrictMode>
-  )
-  ```
-
-  Mounts React, enables React Router and dev checks.
-* **App.tsx**:
-
-    * `<Routes>` with two `<Route>`s:
-
-        * `/` → `HomePage` (headline + `<Link to="/markup"><button>Teilnehmen!</button></Link>`)
-        * `/markup` → `MarkupPage`
-* **MarkupPage.tsx**:
-
-    * Shows two images (300×300), explanatory text, and a controlled `<select>`.
-    * State: `const [answer, setAnswer] = useState<string>("")`
-
-        * `<Dropdown value={answer} onChange={setAnswer} />`
-        * Button: `<button disabled={!answer}>Weiter</button>`
-    * The dropdown’s first option is `value=""` (“Bitte wählen”), so selecting it again resets the state and re-disables the button.
-    * Accessibility: an invisible `<label htmlFor="antwort" className="sr-only">Antwort wählen</label>` (define a `.sr-only` utility in CSS), or alternatively use `aria-label` on the `<select>`.
-
-## Key Types & Props
-
-```ts
-type DropdownProps = {
-  value: string;                 // current selection from parent
-  onChange: (v: string) => void; // report new value to parent
-};
-```
-
-`onChange={(e) => onChange(e.currentTarget.value)}` adapts the native change event to the string that your parent state expects.
 
 ## NPM Scripts
 

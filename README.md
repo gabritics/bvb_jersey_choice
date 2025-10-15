@@ -21,16 +21,6 @@ Built with React, TypeScript, Vite, and React Router.
 * Node.js 18+
 * npm, pnpm, or yarn
 
-## Getting Started
-
-Install and run:
-
-```bash
-git clone <your-repo-url>
-cd <your-project-directory>
-npm install
-npm run dev
-```
 
 Vite serves the app at `http://localhost:5173` by default.
 

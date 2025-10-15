@@ -38,15 +38,3 @@ npm run preview
 * `build` — production build
 * `preview` — preview the production build
 * `lint` — run ESLint (if configured)
-
-## Customization Ideas
-
-* Replace `alert` with a results page or modal
-* Add a “Reset selection” button
-* Show a live summary of the chosen answer
-* Add image captions and responsive styling
-* Persist the choice (e.g., localStorage) or send it to an API
-
-## License
-
-Choose a license (e.g., MIT) and add a `LICENSE` file.
